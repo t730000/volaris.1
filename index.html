@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="https://imagedelivery.net/95QNzrEeP7RU5l5WdbyrKw/77481bed-1249-47bc-5932-bb41abc7da00/shopitem">
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="https://imagedelivery.net/95QNzrEeP7RU5l5WdbyrKw/77481bed-1249-47bc-5932-bb41abc7da00/shopitem">
+	<title>Volaris Store</title>
+      <link rel="stylesheet" type="text/css" href="https://www.bidoof.app/theo.tff">
+	<meta property="og:title" content="Volaris Store">
+	<meta property="og:description" content="Explore our latest products and (maybe) purchase one.">
+	<meta property="og:url" content="https://bidoof.app">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+      <link
+        href="https://cdn.sell.app/embed/style.css"
+        rel="stylesheet"
+    />
+	<style>
+@font-face {
+    font-family: 'Theobi';
+    src: url('https://www.bidoof.app/theobi.ttf') format('truetype');
+}
+      
+      @font-face {
+    font-family: 'Futura';
+    src: url('https://www.bidoof.app/futura.otf') format('opentype');
+}
+    * {
+      padding: 0px; /* Reset shit */
+      margin: 0px; /* Reset more shit */
+              font-family: 'Theo', sans-serif; /* Use the custom font */
+    }
+
+		.modal-backdrop fade show {
+			opacity: 1;
+		}
+
+		body {
+			background: linear-gradient(90deg,  #e6e6e6, #ff33ff);
+			color: black;
+			font-family: 'Courier New', Courier, monospace;
+			transition: all 0.5s ease;
+		}
+
+		h1,
+		h5 {
+			font-family: 'Lucida Console', Courier, monospace;
+		}
+
+		.navbar,
+		.footer {
+			background-color: white;
+		}
+
+		.card {
+						background: linear-gradient(90deg, white,  #ffccff);
+			border: 2px solid rgb(192, 0, 192);
+			box-shadow: 0 0.5rem 1rem 0 rgba(192, 0, 192, 0.1);
+			margin-bottom: 1rem;
+			padding: 20px;
+			transition: all 0.5s ease;
+		}
+
+		.card:hover {
+			transform: scale(1.05);
+		}
+
+		.btn {
+			background-color: white;
+			color: rgb(192, 0, 192);
+			border: 1px solid rgb(192, 0, 192);
+			transition: all 0.5s ease;
+		}
+
+		.btn:hover {
+			background-color: rgb(192, 0, 192);
+			color: white;
+			transform: scale(1.1);
+		}
+
+		.card-title {
+			font-size: 1.5rem;
+			transition: all 0.5s ease;
+		}
+
+		.card-text {
+			font-size: 1rem;
+			transition: all 0.5s ease;
+		}
+
+
+		.modal-dialog {
+			max-width: 100%;
+			margin: 0;
+		}
+
+    .navbar-brand {
+      color: rgb(192, 0, 192) !important;
+    }
+
+		.modal-content {
+			background: none;
+			border: none;
+		}
+
+		.close-button {
+			position: absolute;
+			right: 17.5px;
+			top: -7px;
+			font-size: 4rem;
+			color: #fff;
+			cursor: pointer;
+			z-index: 1;
+		}
+
+		.modal-backdrop {
+			display: none;
+		}
+
+		#tosModal .card:hover,
+		#tosModal .btn:hover {
+			transform: none !important;
+		}
+      
+      .card {
+        border-radius: 10px;
+      }
+      
+      .thing {
+        color: white;
+      }
+      
+      .fa-robot, .fa-code {
+        padding-right: 10px;
+      }
+      
+      #nut {
+          font-family: 'Theobi', sans-serif;
+      }
+     
+      .card-title {
+        font-family: Futura, sans-serif;
+      }
+	</style>
+	<script>
+		$(document).ready(function() {
+            $('#buyModal').on('shown.bs.modal', function() {
+                $('.modal-backdrop').css('pointer-events', 'none');
+            });
+            $('#buyModal').on('hidden.bs.modal', function() {
+                $('.modal-backdrop').css('pointer-events', 'auto');
+            });
+        });
+	</script>
+	<script>
+		$(document).ready(function() {
+            $('#tosModal').on('shown.bs.modal', function() {
+                $('.modal-backdrop').css('pointer-events', 'none');
+            });
+            $('#tosModal').on('hidden.bs.modal', function() {
+                $('.modal-backdrop').css('pointer-events', 'auto');
+            });
+        });
+	</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-dark">
+		<a id="nut" class="navbar-brand" href="#">Volaris Store</a>
+	</nav>
+
+	<div class="container py-5">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 text-center animate__animated animate__fadeIn" data-aos="fade-up">
+				<h1 class="thing">Welcome to the Volaris Store</h1>
+				<p class="thing">Explore our latest products and (maybe) purchase one.</p>
+        <!-- Main card UwU -->
+				<div class="card text-center mt-4 animate__animated animate__fadeInUp" data-aos="fade-up"
+					data-aos-delay="200">
+					<div class="card-body">
+						<h5 class="card-title"><i class="fas fa-code"></i>Volaris V4</h5>
+						<p class="card-text">The latest version of our scripting utility.</p>
+						<button class="btn hvr-grow"         data-sell-store="38070"
+        data-sell-product="200764"
+        data-sell-darkmode="{ true | false }"
+        data-sell-theme=""><i class="fas fa-shopping-cart"></i> Buy Now</button>
+					</div>
+				</div>
+				<!-- External Card -->
+				<div class="card text-center mt-4 animate__animated animate__fadeInUp">
+					<div class="card-body">
+						<h5 class="card-title"><i class="fas fa-robot"></i>Volaris External</h5>
+						<p class="card-text">Our Roblox esp/aimbot, coming soon.</p>
+						<button class="btn btn-primary" disabled><i class="fas fa-clock"></i> Coming Soon</button>
+					</div>
+				</div>
+
+				<!-- TOS Card -->
+				<div class="card text-center mt-4 animate__animated animate__fadeInUp">
+					<div class="card-body">
+						<h5 class="card-title"><i class="fas fa-file-alt"></i> Terms of Service</h5>
+						<p class="card-text">Our guidelines and rules for using our products and services.</p>
+						<p class="card-text"></p>
+						<button class="btn btn-primary" data-toggle="modal" data-target="#tosModal"><i class="fas fa-eye"></i> View</button>
+					</div>
+				</div>
+
+
+				<!-- TOS Modal -->
+				<div class="text-center mt-4 animate__animated animate__fadeInUp modal fade" id="tosModal" tabindex="-1"
+					role="dialog" aria-labelledby="tosModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-lg">
+						<div class="modal-content">
+							<div class="modal-body p-0">
+								<span class="close-button" data-dismiss="modal">&times;</span>
+								<div class="card text-left mt-4">
+									<div class="card-body">
+										<h5 class="card-title">Terms of Service</h5>
+										<p style="font-weight: bold; color: red;" class="card-text">
+											By purchasing our products, you agree to the following terms:
+											<ul>
+												<li>The product is provided "as is", without warranty of any kind.</li>
+												<li>We reserve the right to discontinue the product at any time.</li>
+												<li>You will not use the product for any illegal activities.</li>
+												<li>Violation of these terms may result in termination of your access to
+													the product.</li><br>
+												<li style="font-weight: bold; color: red;">You agree not to engage in
+													any of the following activities:</li>
+												<li>Violating any laws or regulations.</li>
+												<li>Reverse engineering, decompiling, disassembling, or attempting to
+													derive the source code.</li>
+												<li>Using the Service for any illegal or unauthorized purpose.</li>
+												<li>Attempting to gain unauthorized access to the Service or its related
+													systems.</li>
+											</ul>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Buy Modal -->
+				    <script
+        src="https://cdn.sell.app/embed/script.js"
+        type="module"
+    >
+    </script>
+</body>
+<script>
+
+</script>
+
+</html>
